@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BEJEWELED</title>
+    <meta name="Description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style01.css">
+    <link rel="icon" href="images/BJWLDlogo.png" type="image/x-icon"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="Home.html" class="logo">
+            <img class="logo" src="images/BJWLD.png" alt="logo">
+        </a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="ECommerce.html"><button class="contact">HOME</button></a></li>
+                <li><a href="#About"><button class="contact">ABOUT</button></a></li>
+                <li><a href="#Shop"><button class="contact">SHOP</button></a></li>
+                <li><a href="#maincontainer"><button class="contact">MENU</button></a></li>
+                <li><a href="#Contacts"><button class="contact">CONTACT</button></a></li>
+                <li><a href="index.html"><button class="contact">LOG OUT</button></a></li>
+                </ul>
+        </nav>
+            <a><span href="cart" class="fa fa-shopping-cart cart-icon" id="cart-icon" style="font-size:40px;" data-count="0" onclick="toggleCart()"></button></span></a>
+            <a></a>
+            
+        <div class="cart" id="cart">
+            <h2 class="cart-title">Your Shopping Cart</h2>
+
+            <div class="cart-content"></div>
+                <div class="total">
+                   
+                    <div class="total-title">Total</div>
+                    <div class="total-price">₱0</div>
+                </div>
+     
+                <button type="button" class="btn-buy" onclick="display_success()" style="background-color: #ffd2e3;"></button>
+                <button type="button" class="btn-buy" onclick="go_to_next()">Buy Now</button>   
+                <i class="fa fa-close" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <div class="header2" id="Home">
+        <h2 class="home">WELCOME TO BEJEWELED!</h2>
+        <p class="abtme">and this is where you can get your <span style="color: rgb(231, 255, 52);"><b>SPARKLES ON!</b></span></p>
+        <p class="abtme">Jewelry plays a multifaceted role in completing an outfit, going beyond just adding sparkle.<br> Here's why jewelry is important:</span></p>
+    </div>
+    <div class="container" id="Home">
+        <div class="Left-Div">
+            <div class="pic-container">
+                <img src="images/acc1.jpg" id="HomePic1" class="picq">
+                <div class="image-text"><span>Elevates an Outfit: </span><br> Jewelry can take a basic outfit from casual to dressy. A statement necklace can elevate a simple t-shirt and jeans, while delicate earrings can add polish to a work outfit.</div>
+            </div>
+            <div class="pic-container">
+                <img src="images/acc3.jpg" id="HomePic2" class="picq1">
+                <div class="image-text"><span>Expresses Personal Style: </span><br>Jewelry is a powerful tool for self-expression. You can choose pieces that reflect your personality, mood, or interests. Whether it's a bold, chunky necklace or a collection of dainty bracelets, your jewelry choices speak volumes.</div>
+            </div>
+            <div class="pic-container">
+                <img src="images/acc2.jpg" id="HomePic3" class="picq2">
+                <div class="image-text"><span>Creates Balance and Proportion: </span><br> Jewelry can be used to create visual balance in an outfit. A long necklace can elongate a short torso, while a chunky belt can balance out a flowy dress.</div>
+            </div>
+            <div id="About">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/pic01.jpg">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">ABOUT US</h1>
+                            <p class="sub">My name is Izzy, and at 19 years old, I'm thrilled to share my passion for 
+                                jewelry with you through Bejeweled. Yes, you read that right!  While I'm also a student, 
+                                creating and curating beautiful pieces has always been a dream of mine. <br><br>
+                                Bejeweled is a culmination of that passion, and I pour my heart into every piece I source or design.
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/izzy.dejusto.3/"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/zy_djst/"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/@Izzy-lt8wr"><i class="fa fa-youtube"></i></a>
+                                </div>
+                            </p>
+                            <div class="tab-tiles">
+                                <p class="tab-links active-link" onclick="opentab(event,'earrings')">Earrings Collections</p>
+                                <p class="tab-links" onclick="opentab(event,'necklace')">Necklace Collections</p>
+                                <p class="tab-links" onclick="opentab(event,'ring')">Ring Collections</p>
+                                <p class="tab-links" onclick="opentab(event,'bracelet')">Bracelet Collections</p>
+                                <p class="tab-links" onclick="opentab(event,'anklet')">Anklet Collections</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="earrings">
+                                <ul>
+                                    <li><span>Stud Earrings: </span><br>These are small earrings with a post that goes through the earlobe and a backing to secure them in place.</li>
+                                    <li><span>Hoop Earrings: </span><br>They can be simple or adorned with gemstones, pearls, or other embellishments.</li>
+                                    <li><span>Dangle Earrings: </span><br>They are a popular choice for adding a touch of elegance or personality to an outfit.</li>
+                                    <li><span>Piercing Earrings: </span><br>They can be simple and thin or come in more elaborate designs like chains, climbers that travel up the ear, or even crawlers that seem to snake around the cartilage.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="necklace">
+                                <ul>
+                                    <li><span>Pendant Necklace: </span><br>These necklaces feature a pendant, which is a small ornamental piece that hangs from the chain.</li>
+                                    <li><span>Lariat Necklace: </span><br>A lariat necklace is a long necklace, often reaching the navel or below, that can be worn in a variety of ways.</li>
+                                    <li><span>Station Necklace: </span><br>A station necklace features multiple beads, pearls, or other gemstones spaced evenly along the chain.</li>
+                                    <li><span>Choker Necklace: </span><br>A choker is a short necklace that fits snugly around the base of the neck. They can be thin and delicate or thick and statement-making.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="ring">
+                                <ul>
+                                    <li><span>Stacking Ring: </span><br>Stacking rings allow you to create a personalized look and add a touch of whimsy to your outfit.</li>
+                                    <li><span>Engagement Ring: </span><br>Engagement rings are traditionally given by a person to their partner as a symbol of their commitment to getting married.</li>
+                                    <li><span>Promise Ring: </span><br>Promise rings can be any style, but they are often simpler and less expensive than engagement rings.</li>
+                                    <li><span>Statement Ring: </span><br>They can be large and chunky, or they can be more delicate but still have a unique and eye-catching design.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="bracelet">
+                                <ul>
+                                    <li><span>Cuff Bracelet: </span><br>Similar to bangles, cuff bracelets are rigid but have an opening that allows you to slip them on your wrist.</li>
+                                    <li><span>Charm Bracelet: </span><br>These sentimental bracelets feature a chain with links or clasps that can be used to attach charms.</li>
+                                    <li><span>Tennis Bracelet: </span><br>These delicate bracelets feature a row of diamonds or other gemstones set in a flexible metal setting.</li>
+                                    <li><span>Chain Bracelet: </span><br>Link bracelets can be chunky or delicate, and they can be plain or adorned with charms or other embellishments.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="anklet">
+                                <ul>
+                                    <li><span>Chain Anklet: </span><br> They can be worn alone for a minimalist look or layered with other anklets for a more bohemian vibe.</li>
+                                    <li><span>Charm Anklet: </span><br>Similar to charm bracelets, charm anklets feature a chain with links or clasps that can be used to attach charms.</li>
+                                    <li><span>Seashell Anklet: </span><br>A perfect reminder of summer days at the beach, seashell anklets are made from natural seashells strung together on a thread or cord.</li>
+                                    <li><span>Cuff Anklet: </span><br>These stylish anklets have a curved band that fits snugly around the ankle. They can be plain or embellished with beads, charms, or other details.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-section" id="Shop">
+                <div class="left">
+                    <h1>FROM ROUGH GEM TO<br><span style="color: gold;">DAZZLING JEWEL:</span></h1>
+                    <p class="desc" style="color: white;" style="font-family:'Times New Roman', Times, serif;"> Just like the gem that journeys from rough to radiant, we invite you to embark on your own journey of discovery. Explore our collection and find the piece that speaks to your heart. Let us be a part of your story, the moment a rough gem becomes your dazzling jewel.<br> <br>
+                        <a href="#maincontainer"><button class="item1">ORDER NOW</button></a>
+                    </p>
+                </div>
+                <div class="right">
+                    <img src="images/acc4.jpg" alt="Izzy's Picture">
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="maincontainer" id="maincontainer">
+            <div class="servicescontainer">
+                <h1 class="heads">EARRING COLLECTIONS</h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="images/stud_earrings.jpg" class="cart-img" alt="Stud Earrings">
+                        <h3 class="prod-title">Heart-shaped Stud Earrings</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel1)"></a>
+                        <a href="#StudEarrings" class="StudEarrings" ></a>
+                    </div>
+                    <div class="box">
+                        <img src="images/hoop_earrings.jpg" class="cart-img" alt="Hoop Earrings">
+                        <h3 class="prod-title">Diamond Hoop<br> Earrings</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart"  onclick="displayProduct(jewel2)"></a>
+                        <a href="#HoopEarrings" class="HoopEarrings"></a>
+                    </div>
+                    <div class="box">
+                        <img src="images/dangle.jpg" class="cart-img" alt="Dangle Earrings">
+                        <h3 class="prod-title">Butterfly Dangle Earrings</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart"  onclick="displayProduct(jewel3)"></a>
+                        <a href="#DangleEarrings" class="DangleEarrings"></a>
+                    </div>
+                    <div class="box">
+                        <img src="images/piercing.jpg" class="cart-img" alt="Piercing Earrings">
+                        <h3 class="prod-title">Butterfly Ear<br> Cuffs</h3><hr>
+                         <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel4)"></a>
+                        <a href="#PiercingEarrings" class="PiercingEarrings"></a>
+                    </div>
+                </div>
+                <h1 class="heads">NECKLACE COLLECTIONS</h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="images/pendant.jpg" class="cart-img" alt="Pendant Necklace">
+                        <h3 class="prod-title">Water Drop Pendant Necklace</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart"  onclick="displayProduct(jewel5)"></a>
+                        <a href="#PendantNecklace" class="PendantNecklace"></a>
+                    </div>
+                    <div class="box">
+                        <img src="images/lariat.jpg" class="cart-img" alt="Lariat Necklace">
+                        <h3 class="prod-title">Gold Plating Lariat Necklace</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel6)"></a>
+                        <a href="#LariatNecklace" class="LariatNecklace"></a>
+                    </div>
+                    <div class="box">
+                        <img src="images/station.jpg" class="cart-img" alt="Station Necklace">
+                        <h3 class="prod-title">Diamond Shaker Station Necklace</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel7)"></a>
+                        <a href="#StationNecklace" class="StationNecklace"></a>
+                    </div>
+                    <div class="box">
+                        <img src="images/choker.jpg" class="cart-img" alt="Choker Necklace">
+                        <h3 class="prod-title">Celestial Princesscore Choker Necklace</h3><hr>
+                        <span class="prod_price">₱ 559.99</span>
+                        <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel8)"></a>
+                        <a href="#ChokerNecklace" class="ChokerNecklace"></a>
+                    </div>
+            </div>
+            <h1 class="heads">RING COLLECTIONS</h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="images/promisering.jpg" class="cart-img" alt="Promise Ring">
+                    <h3 class="prod-title">White Gold <br>Promise Ring</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel9)"></a>
+                    <a href="#PromiseRing" class="PromiseRing" ></a>
+                </div>
+                <div class="box">
+                    <img src="images/stackingring.jpg" class="cart-img" alt="Stacking Ring">
+                    <h3 class="prod-title">Golden Stacking <br>Ring Set</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel10)"></a>
+                    <a href="#StackingRing" class="StackingRing"></a>
+                </div>
+                <div class="box">
+                    <img src="images/engagement ring.jpg" class="cart-img" alt="Engagement Ring">
+                    <h3 class="prod-title">Oval Diamond Solitaire Engagement Ring</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart"  onclick="displayProduct(jewel11)"></a>
+                    <a href="#EngagementRing" class="EngagementRing"></a>
+                </div>
+                <div class="box">
+                    <img src="images/statement rings.jpg" class="cart-img" alt="Choker Necklace">
+                    <h3 class="prod-title">24k Gold <br>Statement Ring</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel12)"></a>
+                    <a href="#StatementRing" class="StatementRing"></a>
+                </div>
+        </div>
+            <h1 class="heads">BRACELET COLLECTIONS</h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="images/bangle.jpg" class="cart-img" alt="Cuff Bracelet">
+                    <h3 class="prod-title">18k Gold Celestial <br>Cuff Bracelet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel13)"></a>
+                    <a href="#BangleBracelet" class="BangleBracelet"></a>
+                </div>
+                <div class="box">
+                    <img src="images/charm.jpg" class="cart-img" alt="Charm Bracelet">
+                    <h3 class="prod-title">Gold Dragonfly <br>Charm Bracelet </h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel14)"></a>
+                    <a href="#CharmBracelet" class="CharmBracelet"></a>
+                </div>
+                <div class="box">
+                    <img src="images/tennis.jpg" class="cart-img" alt="Tennis Bracelet">
+                    <h3 class="prod-title">Diamond Tennis <br>Bracelet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel15)"></a>
+                    <a href="#TennisBracelet" class="TennisBracelet"></a>
+                </div>
+                <div class="box">
+                    <img src="images/chain.jpg" class="cart-img" alt="Chain Bracelet">
+                    <h3 class="prod-title">14k Gold Chain Link Bracelet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel16)"></a>
+                    <a href="#ChainBracelet" class="ChainBracelet"></a>
+                </div>
+            </div>
+            <h1 class="heads">ANKLET COLLECTIONS</h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="images/ankletchain.jpg" class="cart-img" alt="Chain Anklet">
+                    <h3 class="prod-title">Mira Gem <br>Chain Anklet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel17)"></a>
+                    <a href="#ChainAnklet" class="ChainAnklet"></a>
+                </div>
+                <div class="box">
+                    <img src="images/charmanklet.jpg" class="cart-img" alt="Charm Anklet">
+                    <h3 class="prod-title">Gold Daisy & <br>Pearl Anklet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel18)"></a>
+                    <a href="#CharmAnklet" class="CharmAnklet" ></a>
+                </div>
+                <div class="box">
+                    <img src="images/seashell.jpg" class="cart-img" alt="Seashell Anklet">
+                    <h3 class="prod-title">Gold Seashell <br>Anklet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel19)"></a>
+                    <a href="#SeashellBracelet" class="SeashellBracelet" ></a>
+                </div>
+                <div class="box">
+                    <img src="images/cuffanklet.jpg" class="cart-img" alt="Cuff Anklet">
+                    <h3 class="prod-title">Orb Cuff <br>Anklet</h3><hr>
+                    <span class="prod_price">₱ 559.99</span>
+                    <a class="fa fa-shopping-basket viewCart" onclick="displayProduct(jewel20)"></a>
+                    <a href="#CuffBracelet" class="CuffBracelet" ></a>
+                </div>
+            </div>
+
+            <body>
+                <div id="Contacts"><br><br><br><br>
+                <div class="contact-section">
+                    <div class="containerContacts" >
+                        <div class="contact-header">
+                            <h1>Contact Us</h1>
+                            <p>We would love to hear from you!</p>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-details">
+                                <h2>Contact Details</h2>
+                                <ul>
+                                    <li>Email: dejusto_izzy@plpasig.edu.ph</li>
+                                    <li>Phone: +63-916 882 0737</li>
+                                    <li>Address: Caniogan, Pasig City</li>
+                                </ul>
+                            </div>
+                            <div class="contact-form">
+                                <h2>Contact Form</h2>
+                                <form>
+                                    <input type="text" name="name" placeholder="Your Name">
+                                    <input type="email" name="email" placeholder="Your Email">
+                                    <textarea name="message" placeholder="Your Message"></textarea>
+                                    <button type="submit">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Place Order Section -->
+            <section class="place_order" id="place_order">
+                <div class="deliver_info">
+                    <a href="#" onclick="back_to_cart(); return false;">
+                        <span class='fa fa-arrow-right'id="back"></span>
+                    </a>
+                    <div class="sub_title">
+                        <h1>Delivery Information</h1>
+                    </div>
+            
+                    <form>
+                        <table border="0">
+                            <tr>
+                                <td>Full Name:</td>
+                                <td class="input_center">
+                                    <input type="text" id="full_name" name="full_name" value="" placeholder="Name" required/>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td>Mobile Number:</td>
+                                <td class="input_center">
+                                    <input type="number" id="mobile_num" name="mobile_num" value="" placeholder="(+63) 907 032 4570" required/>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td>Address:</td>
+                                <td class="input_center">
+                                    <textarea id="address" placeholder="Your full address" required></textarea>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td>
+                                    <span class='bx bx-wallet'></span>
+                                    Payment Option:
+                                </td>
+                                <td class="input_center">
+                                    <select name="pay_method" id="pay_method" onchange="toggle_cardfields()">
+                                        <option value="Cash_on_Delivery">Cash on Delivery</option>
+                                        <option value="Card">Credit/Debit Card</option>
+                                    </select><br>
+                                </td>
+                            </tr>
+            
+                            <tr id="name_on_card_row" style="display: none;">
+                                <td style="border: none;"></td>
+                                <td class="input_center" style="border: none;">
+                                    <input type="text" id="name_on_card" name="name_on_card" value="" placeholder="Name on Card" required/>
+                                </td>
+                            </tr>
+            
+                            <tr id="card_num_row" style="display: none;">
+                                <td></td>
+                                <td class="input_center">
+                                    <input type="number" id="card_num" name="card_num" value="" placeholder="Card Number" required/>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td colspan="2" class="input_center">
+                                    <textarea placeholder="Other instructions..."></textarea>
+                                </td>
+                            </tr>
+                        </table>
+            
+                        <button type="button" class="pay-now" onclick="display_success()">Pay Now</button>
+                    </form>
+                </div>
+            </section>
+            <div class="previewMenu" id="previewMenu">
+                <div class="productContent">
+                    <div class="img_holder">
+                        <img class="add_to_cart_img" id="product_img" src="">
+                    </div>
+                    <div class="text_content">
+                        <div class="btn-close" onclick="toggle_remove()">&times;</div>
+                        <h1 id="product_name"></h1>
+                        <p id="product_price"></p>
+                       
+                        <p id="desc_product">DESCRIPTION: </p>
+                        <p id="product_desc"></p>
+                        <br>
+                        <br>
+    
+
+
+                        <button id="btnAdd_to_cart" class="fa fa-shopping-basket add-to-cart" onclick="addProductToCart()"> <br> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    <footer>
+        <div class="footer-content">
+            <div class="footerBottom">
+                <p>&copy; Designed by <span class="designer"> Izzy De Justo</span></p>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            <p>
+                Follow us:
+                <a href="#" class="social-icon">Facebook</a> |
+                <a href="#" class="social-icon">Twitter</a> |
+                <a href="#" class="social-icon">Instagram</a>
+            </p>
+        </div>
+    </footer>
+    <script src ="trymain.js"></script>
+</body>
+</html>
